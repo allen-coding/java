@@ -1,13 +1,21 @@
 spring:
   datasource:
     allen:
-      url: 	jdbc:mysql://192.168.100.40:3306/allen?zeroDateTimeBehavior=convertToNull&useSSL=false
-      name: java_team
-      password: java_team
+      jdbc-url: jdbc:mysql://localhost:3306/pandora?zeroDateTimeBehavior=convertToNull&useSSL=false
+      username: root
+      password: password
     hikari:
       maximum-pool-size: 10
       minimum-idle: 5
       connection-test-query: select 1 from dual
       pool-name: allen-mysql
+  redis:
+    host: 127.0.0.1
+    port: 6379
+#    lettuce:
+#      pool:
+#        max-active: 5
+#        min-idle: 3
+#        max-wait: 3000ms
 
 

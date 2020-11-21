@@ -15,7 +15,8 @@
         <module>svc</module>
         <module>domain</module>
         <module>common</module>
-        <module>dist</module>
+        <module>web-mvc</module>
+        <!--<module>dist</module>-->
     </modules>
 
     <properties>
@@ -31,6 +32,16 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.allen.java</groupId>
+                <artifactId>domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.allen.java</groupId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!--spring-boot-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
